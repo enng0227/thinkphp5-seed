@@ -9,13 +9,11 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-return [
-    '__pattern__' => [
-        'name' => '\w+',
-    ],
-    '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
-    ],
-
-];
+use think\Route;
+// Token
+Route::post("api/:version/token/user","api/:version.Token/getToken");
+Route::post("api/:version/token/app","api/:version.Token/getAppToken");
+Route::post("api/:version/token/verify","api/:version.Token/verifyToken");
+// address
+Route::post("api/:version/address","api/:version.Address/createOrUpdateAddress");
+Route::get("api/:version/address","api/:version.Address/getUserAddress");
