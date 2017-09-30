@@ -62,7 +62,7 @@ class UserToken extends Token
     if (!$request) {
       throw new TokenException([
         "msg" => "服务器缓存异常",
-        "errorCode" =>　10005
+        "errorCode" =>  10005
       ]);
     }
     return $key;

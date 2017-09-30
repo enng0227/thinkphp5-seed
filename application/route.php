@@ -14,6 +14,8 @@ use think\Route;
 Route::post("api/:version/token/user","api/:version.Token/getToken");
 Route::post("api/:version/token/app","api/:version.Token/getAppToken");
 Route::post("api/:version/token/verify","api/:version.Token/verifyToken");
+//App
+Route::post("api/:version/app/thirdapp","api/:version.App/createThirdApp");
 // address
 Route::post("api/:version/address","api/:version.Address/createOrUpdateAddress");
 Route::get("api/:version/address","api/:version.Address/getUserAddress");
